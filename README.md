@@ -1,14 +1,14 @@
-# zara# zara
+# Prueba técnica frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Exercise to develop the user interface for Apple podcast.  
 
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Product
+![PruebaTecZara1](https://user-images.githubusercontent.com/117633735/230628866-f73a64e1-ddd9-4534-bc3e-db30047cd181.PNG)
+![PruebaTecZara2](https://user-images.githubusercontent.com/117633735/230628890-f1844e6b-17f3-44ae-a238-62c45d5bafb2.PNG)
 
 ## Project Setup
 
@@ -28,8 +28,3 @@ npm run dev
 npm run build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
