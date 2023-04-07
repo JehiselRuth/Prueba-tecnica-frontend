@@ -1,7 +1,6 @@
 <script setup>
 import { usePodcastFavoriteStore } from "@/stores/storeFavorites";
 import { ref } from "vue";
-import { RouterLink } from "vue-router";
 
 const favoriteStore = usePodcastFavoriteStore();
 
@@ -16,16 +15,15 @@ const podcast1 = ref({});
 const sendPodcastFavorite = () => {
   favoriteStore.showPodcasts(props.podcast);
 
-  // alert("Se ha añadido un nuevo podcast a tu lista de favoritos");
+  alert("Para volver a la lista haz click en PODCASTER");
 };
 </script>
 
 <template>
-  
   <div class="wrapper">
     <v-layout>
       <v-card
-        v-on:click="sendPodcastFavorite" 
+        v-on:click="sendPodcastFavorite"
         to="/about"
         class="mx-auto"
         max-width="434"
@@ -50,14 +48,11 @@ const sendPodcastFavorite = () => {
       </v-card>
     </v-layout>
   </div>
-
-
-  
 </template>
 
 <style>
 .wrapper {
-  margin: 2em;
+  margin-bottom: 2em;
 }
 
 .titleCard {

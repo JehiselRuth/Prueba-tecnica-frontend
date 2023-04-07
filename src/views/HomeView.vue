@@ -3,7 +3,7 @@ import CardItem from "../components/CardItem.vue";
 
 import { onBeforeMount } from "vue";
 import { usePodcastStore } from "../stores/store.js";
-import { ref, onBeforeUnmount } from 'vue'
+import { ref, onBeforeUnmount } from "vue";
 
 const podcastStore = usePodcastStore();
 
@@ -13,44 +13,47 @@ onBeforeMount(() => {
 
 const getPodcast = async () => {
   await podcastStore.fetchPodcasts();
+};
 
-  }
-
+const search = "";
+const headers = [
+  {
+    align: "start",
+    key: "podcast",
+    sortable: false,
+    title: "authors",
+  },
+  { key: "authors" },
+];
 </script>
 
 <template>
- 
+  <header>
+    <v-text-field
+      class="search"
+      v-model="search"
+      append-icon="mdi-magnify"
+      label="Filter podcast"
+      single-line
+      hide-details
+    ></v-text-field>
+  </header>
+
   <main>
-   
-    <CardItem 
+    <CardItem
       v-for="podcast in podcastStore.podcasts.splice(2, 20)"
       :key="podcast"
       :podcast="podcast"
     />
-
-
   </main>
 </template>
-<style>
+<style scoped>
+.search {
+  max-width: 24em;
+}
 main {
   border-radius: 10px;
   width: 100%;
-  margin: 1em;
   column-count: 4;
-}
-
-
-@media (max-width: 1200px) {
-  main {
-    width: 100%;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  main {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
 }
 </style>
